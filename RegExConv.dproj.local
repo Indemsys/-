@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.063,=D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.487,D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\PDFtoH.dproj=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.658,D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\RegExRef.dfm=D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.822,=D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Main.dfm=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.347,D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Unit1.dfm=D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\DataModule.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.347,D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Unit1.pas=D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\DataModule.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.834,C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Main.pas=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.658,D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\RegExRef.pas=D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.332,=D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Profiling\AQtimeModule1.aqt</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.423,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.904,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.129,D:\Embedded\Projects\Delphi_utils\PDF_to_Headers\Profiling\AQtimeModule1.aqt=</Transaction>
+    <Transaction>2018.03.19 15:13:46.158,D:\Embedded\Projects\Delphi_utils\Regular_Expressions\RegExConv.dproj=D:\Embedded\Projects\Delphi_utils\Regular_Expressions\PDFtoH.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
