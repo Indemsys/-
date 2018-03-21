@@ -13,17 +13,17 @@ uses
   dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinscxPCPainter, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit,
   cxNavigator, Data.DB, cxDBData, cxClasses, cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGridLevel, cxGridCustomView, cxGrid, cxPropertiesStore,
-  cxHyperLinkEdit;
+  cxHyperLinkEdit, cxMemo;
 
 type
   TfrmRegExRef = class(TForm)
-    cxGrid1DBTableView1: TcxGridDBTableView;
+    gridRegExQref: TcxGridDBTableView;
     cxGrid1Level1: TcxGridLevel;
     cxGrid1: TcxGrid;
-    cxGrid1DBTableView1ID: TcxGridDBColumn;
-    cxGrid1DBTableView1Syntax: TcxGridDBColumn;
-    cxGrid1DBTableView1Feature: TcxGridDBColumn;
-    cxGrid1DBTableView1Comment: TcxGridDBColumn;
+    gridRegExQrefID: TcxGridDBColumn;
+    gridRegExQrefSyntax: TcxGridDBColumn;
+    gridRegExQrefFeature: TcxGridDBColumn;
+    gridRegExQrefComment: TcxGridDBColumn;
     cxStyleRepository1: TcxStyleRepository;
     cxStyle1: TcxStyle;
     cxPropertiesStore: TcxPropertiesStore;

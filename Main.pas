@@ -20,7 +20,7 @@ uses
   dxSpreadSheet, cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxNavigator, Data.DB, cxDBData, cxGridCustomTableView, cxGridTableView,
   cxGridDBTableView, cxGridLevel, cxGridCustomView, cxGrid, dxmdaset, System.ImageList, Vcl.ImgList, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, System.Actions,
   Vcl.ActnList, Vcl.PlatformDefaultStyleActnCtrls, cxPC, System.Diagnostics, System.TimeSpan, Vcl.Menus,
-  Data.Win.ADODB;
+  Data.Win.ADODB, ShellAPI;
 
 type
   TfrmMain = class(TForm)
@@ -81,6 +81,7 @@ type
     btnCreateRegEx: TButton;
     btnOpenRegExRef: TButton;
     btnCopyRegEx: TButton;
+    linkHelp: TLinkLabel;
     procedure btnExecClick(Sender: TObject);
     procedure btnLoadClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
@@ -88,6 +89,7 @@ type
     procedure btnCreateRegExClick(Sender: TObject);
     procedure btnOpenRegExRefClick(Sender: TObject);
     procedure btnCopyRegExClick(Sender: TObject);
+    procedure linkHelpLinkClick(Sender: TObject; const Link: string; LinkType: TSysLinkType);
   private
     matched_lines_cnt: integer;
     time_elapsed: integer;
@@ -147,21 +149,27 @@ end;
 
 procedure TfrmMain.btnCreateRegExClick(Sender: TObject);
 var
+  dts: TADOTable;
   str: string;
 begin
   dm.tblRegEx_items.DisableControls;
+  dts :=  TADOTable.Create(Self);
   try
-    // dm.tblRegEx_items.Sort := 'Nr ASC';
+    dts.Clone(dm.tblRegEx_items);
+    dts.Sort := 'Nr ASC';
+    dts.Filter := 'RegExID = '+ dm.tblRegExsRegExID.AsString;
+    dts.Filtered := True;
     str := '';
-    dm.tblRegEx_items.First;
-    while not dm.tblRegEx_items.Eof do
+    dts.First;
+    while not dts.Eof do
     begin
-      str := str + dm.tblRegEx_itemsContent.AsString;
-      dm.tblRegEx_items.Next;
+      str := str + dts.FieldByName('Content').AsString;
+      dts.Next;
     end;
     edRegExpression.Text := str;
 
   finally
+    dts.Free;
     dm.tblRegEx_items.EnableControls;
   end;
 end;
@@ -266,6 +274,11 @@ begin
   finally
     memoResults.Lines.EndUpdate;
   end;
+end;
+
+procedure TfrmMain.linkHelpLinkClick(Sender: TObject; const Link: string; LinkType: TSysLinkType);
+begin
+  ShellExecute(0, nil, PChar(Link), nil, nil, SW_SHOWNORMAL);
 end;
 
 procedure TfrmMain.btnExecClick(Sender: TObject);

@@ -209,7 +209,7 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 260
         Top = 4
-        Height = 145
+        Height = 147
         Beveled = True
         ExplicitLeft = 248
         ExplicitTop = 224
@@ -236,9 +236,10 @@ object frmMain: TfrmMain
         Left = 266
         Top = 1
         Width = 372
-        Height = 151
+        Height = 153
         Align = alClient
         TabOrder = 0
+        ExplicitHeight = 151
         object RxLabel4: TRxLabel
           AlignWithMargins = True
           Left = 4
@@ -259,11 +260,12 @@ object frmMain: TfrmMain
           Left = 1
           Top = 21
           Width = 370
-          Height = 129
+          Height = 131
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfFlat
           LookAndFeel.NativeStyle = False
+          ExplicitHeight = 129
           object gridRegExItems: TcxGridDBTableView
             Navigator.Buttons.CustomButtons = <>
             Navigator.Visible = True
@@ -286,7 +288,9 @@ object frmMain: TfrmMain
             end
             object gridRegExItemsNr: TcxGridDBColumn
               DataBinding.FieldName = 'Nr'
-              Width = 25
+              SortIndex = 0
+              SortOrder = soAscending
+              Width = 31
             end
             object gridRegExItemsContent: TcxGridDBColumn
               DataBinding.FieldName = 'Content'
@@ -307,9 +311,10 @@ object frmMain: TfrmMain
         Left = 1
         Top = 1
         Width = 256
-        Height = 151
+        Height = 153
         Align = alLeft
         TabOrder = 1
+        ExplicitHeight = 151
         object RxLabel2: TRxLabel
           AlignWithMargins = True
           Left = 4
@@ -330,11 +335,12 @@ object frmMain: TfrmMain
           Left = 1
           Top = 21
           Width = 254
-          Height = 129
+          Height = 131
           Align = alClient
           TabOrder = 0
           LookAndFeel.Kind = lfFlat
           LookAndFeel.NativeStyle = False
+          ExplicitHeight = 129
           object gridRegEx: TcxGridDBTableView
             Navigator.Buttons.CustomButtons = <>
             Navigator.Visible = True
@@ -389,50 +395,77 @@ object frmMain: TfrmMain
       end
       object Panel8: TPanel
         Left = 1
-        Top = 152
+        Top = 154
         Width = 637
-        Height = 37
+        Height = 35
         Align = alBottom
-        AutoSize = True
         TabOrder = 4
+        ExplicitLeft = -6
+        ExplicitTop = 128
         object btnCreateRegEx: TButton
           AlignWithMargins = True
           Left = 4
           Top = 4
           Width = 235
-          Height = 29
+          Height = 27
           Align = alLeft
           Caption = #1057#1092#1086#1088#1084#1080#1088#1086#1074#1072#1090#1100' '#1088#1077#1075#1091#1083#1103#1088#1085#1086#1077' '#1074#1099#1088#1072#1078#1077#1085#1080#1077
           ImageIndex = 0
           Images = cxImageListSmall
           TabOrder = 0
           OnClick = btnCreateRegExClick
+          ExplicitTop = 76
+          ExplicitHeight = 98
         end
         object btnOpenRegExRef: TButton
           AlignWithMargins = True
           Left = 389
           Top = 4
           Width = 138
-          Height = 29
+          Height = 27
           Align = alLeft
           Caption = #1054#1090#1082#1088#1099#1090#1100' '#1089#1087#1088#1072#1074#1082#1091
           ImageIndex = 1
           Images = cxImageListSmall
           TabOrder = 1
           OnClick = btnOpenRegExRefClick
+          ExplicitHeight = 10
         end
         object btnCopyRegEx: TButton
           AlignWithMargins = True
           Left = 245
           Top = 4
           Width = 138
-          Height = 29
+          Height = 27
           Align = alLeft
           Caption = #1057#1086#1079#1076#1072#1090#1100' '#1082#1086#1087#1080#1102
           ImageIndex = 3
           Images = cxImageListSmall
           TabOrder = 2
           OnClick = btnCopyRegExClick
+          ExplicitHeight = 29
+        end
+        object linkHelp: TLinkLabel
+          AlignWithMargins = True
+          Left = 533
+          Top = 4
+          Width = 53
+          Height = 27
+          Align = alLeft
+          AutoSize = False
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Caption = 
+            '<a href="http://www.regular-expressions.info/refquick.html">Help' +
+            '</a> '
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 3
+          OnLinkClick = linkHelpLinkClick
         end
       end
     end

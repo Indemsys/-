@@ -27,6 +27,7 @@ object dm: Tdm
     Active = True
     Connection = ADOConnection
     CursorType = ctStatic
+    TableDirect = True
     TableName = 'RegExs'
     Left = 96
     Top = 144
@@ -48,6 +49,7 @@ object dm: Tdm
     CursorType = ctStatic
     MasterFields = 'RegExID'
     MasterSource = dsRegExs
+    TableDirect = True
     TableName = 'RegEx_items'
     Left = 248
     Top = 144
@@ -74,7 +76,7 @@ object dm: Tdm
     Active = True
     Connection = ADOConnection
     CursorType = ctStatic
-    LockType = ltReadOnly
+    TableDirect = True
     TableName = 'RegExQuickRef'
     Left = 368
     Top = 144

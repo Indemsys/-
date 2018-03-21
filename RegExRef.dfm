@@ -23,7 +23,7 @@ object frmRegExRef: TfrmRegExRef
     TabOrder = 0
     LookAndFeel.Kind = lfFlat
     LookAndFeel.NativeStyle = False
-    object cxGrid1DBTableView1: TcxGridDBTableView
+    object gridRegExQref: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       Navigator.InfoPanel.Visible = True
       Navigator.Visible = True
@@ -31,34 +31,35 @@ object frmRegExRef: TfrmRegExRef
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
       DataController.Summary.SummaryGroups = <>
+      OptionsBehavior.ImmediateEditor = False
+      OptionsCustomize.DataRowSizing = True
       OptionsData.CancelOnExit = False
       OptionsData.Deleting = False
       OptionsData.DeletingConfirmation = False
       OptionsData.Inserting = False
-      object cxGrid1DBTableView1ID: TcxGridDBColumn
+      OptionsView.DataRowHeight = 30
+      OptionsView.Indicator = True
+      object gridRegExQrefID: TcxGridDBColumn
         DataBinding.FieldName = 'ID'
         Visible = False
       end
-      object cxGrid1DBTableView1Syntax: TcxGridDBColumn
+      object gridRegExQrefSyntax: TcxGridDBColumn
         DataBinding.FieldName = 'Syntax'
         Styles.Content = cxStyle1
         Width = 365
       end
-      object cxGrid1DBTableView1Feature: TcxGridDBColumn
+      object gridRegExQrefFeature: TcxGridDBColumn
         DataBinding.FieldName = 'Feature'
         Width = 253
       end
-      object cxGrid1DBTableView1Comment: TcxGridDBColumn
+      object gridRegExQrefComment: TcxGridDBColumn
         DataBinding.FieldName = 'Comment'
-        PropertiesClassName = 'TcxHyperLinkEditProperties'
-        Properties.SingleClick = True
-        Properties.UsePrefix = upNever
-        Properties.Prefix = ''
+        PropertiesClassName = 'TcxMemoProperties'
         Width = 331
       end
     end
     object cxGrid1Level1: TcxGridLevel
-      GridView = cxGrid1DBTableView1
+      GridView = gridRegExQref
     end
   end
   object cxStyleRepository1: TcxStyleRepository
@@ -77,26 +78,31 @@ object frmRegExRef: TfrmRegExRef
   object cxPropertiesStore: TcxPropertiesStore
     Components = <
       item
-        Component = cxGrid1DBTableView1Comment
-        Properties.Strings = (
-          'Width')
-      end
-      item
-        Component = cxGrid1DBTableView1Feature
-        Properties.Strings = (
-          'Width')
-      end
-      item
-        Component = cxGrid1DBTableView1Syntax
-        Properties.Strings = (
-          'Width')
-      end
-      item
         Component = Owner
         Properties.Strings = (
           'Height'
           'Left'
           'Top'
+          'Width')
+      end
+      item
+        Component = gridRegExQref
+        Properties.Strings = (
+          'OptionsView.DataRowHeight')
+      end
+      item
+        Component = gridRegExQrefComment
+        Properties.Strings = (
+          'Width')
+      end
+      item
+        Component = gridRegExQrefFeature
+        Properties.Strings = (
+          'Width')
+      end
+      item
+        Component = gridRegExQrefSyntax
+        Properties.Strings = (
           'Width')
       end>
     StorageName = 'qref.ini'
